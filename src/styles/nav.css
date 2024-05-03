@@ -1,0 +1,19 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.main-nav a{
+    margin: 0 1rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+     /* color: #FCB7A6; */
+}
+
+.main-nav a:hover, .main-nav a:focus {
+    outline: 2px solid #FFB85C;
+    border-radius: 2px;
+    color: #FFB85C;
+  }
+

@@ -1,19 +1,21 @@
 // Nav
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import '../styles/nav.css';
 
 const Nav = () => {
 
-    function blur(e){
-        e.target.blur();
-    }
-
+  
     return (
-        <nav className="main-nav" onClick={blur}>
-            <ul>
-                <li><NavLink to="/About">About</NavLink></li>
+        <nav className="main-nav">
+            <NavLink to="/About">About</NavLink>
+            <NavLink to="/Fav">Favourites</NavLink>
+            {/* <ul>
+                <li> <NavLink to="/About">About</NavLink></li>
                 <li><NavLink to="/Fav">Favourites</NavLink></li>
-            </ul>
+            </ul> */}
+           
+            
         </nav>
     );
 
