@@ -6,7 +6,7 @@
     font-weight: 900;
 }
 
-.main-nav a:hover, .main-nav a:focus{
+.main-nav a:hover{
     /* outline: 2px solid #FFB85C; */
     outline: 2px solid #8F0043;
     border-radius: 10px;
