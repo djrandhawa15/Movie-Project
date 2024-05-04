@@ -4,7 +4,6 @@
     left: 0;
     right: 0;
     background-color: #fce7fd;
-    
 }
 
 img{
@@ -18,7 +17,7 @@ a:hover, a:focus{
    
 }
 
-@media (min-width: 50em) {
+@media (min-width: 36.06em) {
 .header {
     display: flex;
     justify-content: space-between;
