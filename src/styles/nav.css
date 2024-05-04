@@ -1,19 +1,40 @@
+.main-nav a{
+    font-size: 1.5rem;
+    color: #430a47;
+    padding: 12px;
+    
+}
+
+.main-nav a:hover, .main-nav a:focus{
+    /* outline: 2px solid #FFB85C; */
+    outline: 2px solid #8F0043;
+    border-radius: 10px;
+    color: #8F0043;
+}
+
+
+@media (min-width: 50em) {
 .main-nav {
     display: flex;
     justify-content: space-between;
-   
+    
 }
-
 .main-nav a{
-    margin: 0 1rem;
-    padding: 0.3rem;
-    font-size: 1.5rem;
-     /* color: #FCB7A6; */
+    font-size: 2rem;
+    margin-right:2rem ;
+    padding: 0.5rem;
+ 
+}
 }
 
-.main-nav a:hover, .main-nav a:focus {
-    outline: 2px solid #FFB85C;
-    border-radius: 2px;
-    color: #FFB85C;
-  }
-
+@media (max-width: 768px) {
+.main-nav{
+   position: fixed;
+   top:auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+   background-color: #fce7fd;
+    }
+}

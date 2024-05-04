@@ -10,12 +10,6 @@ const Nav = () => {
         <nav className="main-nav">
             <NavLink to="/About">About</NavLink>
             <NavLink to="/Fav">Favourites</NavLink>
-            {/* <ul>
-                <li> <NavLink to="/About">About</NavLink></li>
-                <li><NavLink to="/Fav">Favourites</NavLink></li>
-            </ul> */}
-           
-            
         </nav>
     );
 
