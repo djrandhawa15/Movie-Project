@@ -13,6 +13,11 @@
     color: #8F0043;
 }
 
+.main-nav a:focus{
+    outline: none;
+   
+    color: #8F0043;
+}
 
 @media (min-width: 36.06em) {
 .main-nav {
