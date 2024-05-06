@@ -7,7 +7,7 @@ import '../styles/header.css'
 const Header = () => {
   return (
     <div className='header'>
-      <NavLink to='/home'>
+      <NavLink to='/'>
         <img src={logo} alt="Logo" />
       </NavLink>
         <Nav/>
