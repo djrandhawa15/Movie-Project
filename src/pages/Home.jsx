@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Categories from './Categories';
-// import Categories from './Categories';
-const apiKey = import.meta.env.VITE_API_KEY
+import MovieCard from './MovieCard';
+// const apiKey = import.meta.env.VITE_API_KEY;
 
 
   
@@ -24,11 +24,10 @@ const Home = () => {
 
   useEffect( () => {
     const fetchMovies = async () => {
-      // const apiKey = '0143a6b89b7cfaa0bd7babb647960156';
+      const apiKey = '0143a6b89b7cfaa0bd7babb647960156';
       const response = await fetch (`https://api.themoviedb.org/3/movie/${selectedCategory}?api_key=${apiKey}`);
       const data = await response.json();
       setMovies(data.results);
-      console.log("here");
 
     }
 
@@ -43,12 +42,15 @@ const Home = () => {
   return (
     <div>
       <Categories fetchMovies={handleCategoryChange}/>
-      <h1>Movies</h1>
+      <h1>{selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Movies</h1>
+      
       <ul>
          {movies && movies.map((movie) =>(
-          <li key={movie.id}>{movie.title}</li>
+          <MovieCard key={movie.id} movie={movie} />
+          // <li key={movie.id}>{movie.title}</li>
         ))}
       </ul>
+      
       </div>
   )
 }
