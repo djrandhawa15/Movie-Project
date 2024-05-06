@@ -7,6 +7,7 @@ const MovieCard = ({ movie }) => {
       <h2>{movie.title}</h2>
       <p>Release Date: {movie.release_date}</p>
       <p>Rating: {movie.vote_average}</p>
+      {/* <p>Overview: {movie.overview}</p> */}
     </div>
   );
 }

@@ -21,6 +21,7 @@ const Home = () => {
   // const [sort, setSort] = useState(listofMovies[0])
   const [movies, setMovies] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Popular");
+  const [heroImage, setHeroImage] = useState("");
 
   useEffect( () => {
     const fetchMovies = async () => {
@@ -28,6 +29,9 @@ const Home = () => {
       const response = await fetch (`https://api.themoviedb.org/3/movie/${selectedCategory}?api_key=${apiKey}`);
       const data = await response.json();
       setMovies(data.results);
+      if (data.results.length > 0) {
+        setHeroImage(`https://image.tmdb.org/t/p/original${data.results[0].backdrop_path}`);
+      }
 
     }
 
@@ -35,12 +39,22 @@ const Home = () => {
 
   }, [selectedCategory])
 
+
   const handleCategoryChange = (listofMovie) => {
     setSelectedCategory(listofMovie);
   }
 
   return (
     <div>
+          <div className="hero-text">
+            <h1>Welcome to CINE HUB</h1>
+            <p>Discover your favorite movies here</p>
+          </div>
+      {heroImage && (
+        <div className="hero">
+          <img src={heroImage} alt="Hero" className="hero-image" />
+        </div>
+      )}
       <Categories fetchMovies={handleCategoryChange}/>
       <h1>{selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Movies</h1>
       

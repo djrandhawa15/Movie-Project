@@ -71,3 +71,7 @@ img, video {
   padding: 1rem;
   display: inline-grid;
 }
+
+.hero {
+  background-size: cover;
+}
