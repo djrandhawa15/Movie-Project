@@ -1,8 +1,8 @@
 import React from 'react'
 
-const categories= ({ fetchMovies }) =>  {
+const Categories= ({ fetchMovies }) =>  {
 
-    const listofMovies = [ "Popular", "Top Rated", "Now Playing", "Upcoming"];
+    const listofMovies = [ "popular", "top_rated", "now_playing", "upcoming"];
     return (
       <nav>
         <ul>
@@ -18,4 +18,4 @@ const categories= ({ fetchMovies }) =>  {
     )
 }
 
-export default categories
+export default Categories

@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Categories from '../src/pages/Categories.jsx';
-// const apiKey = import.meta.env.API_KEY
+import Categories from './Categories';
+// import Categories from './Categories';
+const apiKey = import.meta.env.VITE_API_KEY
 
 
   
@@ -19,27 +20,33 @@ import Categories from '../src/pages/Categories.jsx';
 const Home = () => {
   // const [sort, setSort] = useState(listofMovies[0])
   const [movies, setMovies] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("Popular");
 
   useEffect( () => {
     const fetchMovies = async () => {
-      const apiKey = '0143a6b89b7cfaa0bd7babb647960156';
-      const response = await fetch (`https://api.themoviedb.org/3/movie/${listofMovie}?api_key=${apiKey}`);
+      // const apiKey = '0143a6b89b7cfaa0bd7babb647960156';
+      const response = await fetch (`https://api.themoviedb.org/3/movie/${selectedCategory}?api_key=${apiKey}`);
       const data = await response.json();
       setMovies(data.results);
+      console.log("here");
 
     }
 
-    fetchMovies();
+    fetchMovies(selectedCategory);
 
-  }, [])
+  }, [selectedCategory])
+
+  const handleCategoryChange = (listofMovie) => {
+    setSelectedCategory(listofMovie);
+  }
 
   return (
     <div>
-      <Categories/>
-      <h1>Popular Movies</h1>
+      <Categories fetchMovies={handleCategoryChange}/>
+      <h1>Movies</h1>
       <ul>
-        {movies.map((movies) =>(
-          <li key={movies.id}>{movies.title}</li>
+         {movies && movies.map((movie) =>(
+          <li key={movie.id}>{movie.title}</li>
         ))}
       </ul>
       </div>

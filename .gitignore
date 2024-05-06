@@ -98,4 +98,6 @@ styles/
 *.swo
 *.swp
 *.vi
+*.env
+.env
 *~
