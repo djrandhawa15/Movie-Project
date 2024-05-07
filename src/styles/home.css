@@ -1,0 +1,17 @@
+.container{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.hero {
+    width: 100%;
+    overflow: hidden;
+  
+}
+
+.hero-image{
+    display: block;
+    object-fit: cover;
+    width: 1920px;
+    height: 100%;
+}
