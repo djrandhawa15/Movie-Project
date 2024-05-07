@@ -27,51 +27,10 @@ h6 {
   font-size: 1.75rem;
 }
 
-p {
-  margin: 0 0 1.5em;
-}
 
-/* Elements
---------------------------------------------- */
-section {
-  padding: 0 1rem;
-}
-
-/* Links
---------------------------------------------- */
-a,
-a:visited {
-  text-decoration: none;
-  color: #F0BBF7;
-}
-
-
-a:focus,
-a:hover{
-  outline: 2px solid #FFB85C;
-  border-radius: 2px;
-  color: #FFB85C;
-}
-
-
-
-a:active {
- 
-  color: #ec8d8d;
-}
 
 img, video {
   max-width: 100%;
   height: auto;
 }
 
-.movie-card {
-  height: 550px;
-  width: 250px;
-  padding: 1rem;
-  display: inline-grid;
-}
-
-.hero {
-  background-size: cover;
-}

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Categories from './Categories';
 import MovieCard from './MovieCard';
+import '../styles/home.css';
 // const apiKey = import.meta.env.VITE_API_KEY;
 
 
@@ -18,9 +19,9 @@ import MovieCard from './MovieCard';
 // }
 
 const Home = () => {
-  // const [sort, setSort] = useState(listofMovies[0])
+  
   const [movies, setMovies] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("Popular");
+  const [selectedCategory, setSelectedCategory] = useState("popular");
   const [heroImage, setHeroImage] = useState("");
 
   useEffect( () => {
@@ -45,10 +46,10 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
           <div className="hero-text">
-            <h1>Welcome to CINE HUB</h1>
-            <p>Discover your favorite movies here</p>
+            {/* <h1>Welcome to CINE HUB</h1>
+            <p>Discover your favorite movies here</p> */}
           </div>
       {heroImage && (
         <div className="hero">
@@ -56,7 +57,7 @@ const Home = () => {
         </div>
       )}
       <Categories fetchMovies={handleCategoryChange}/>
-      <h1>{selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Movies</h1>
+      {/* <h1>{selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Movies</h1> */}
       
       <ul>
          {movies && movies.map((movie) =>(
