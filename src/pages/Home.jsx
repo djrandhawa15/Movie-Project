@@ -13,8 +13,7 @@ const Home = () => {
 
   useEffect( () => {
     const fetchMovies = async () => {
-      // const apiKey = '0143a6b89b7cfaa0bd7babb647960156';
-      // console.log({apiKey});
+      
       const response = await fetch (`https://api.themoviedb.org/3/movie/${selectedCategory}?api_key=${apiKey}`);
       const data = await response.json();
       setMovies(data.results);
