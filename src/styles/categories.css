@@ -1,0 +1,20 @@
+.react-tabs {
+    border: 2px solid black;
+    padding: 1rem; 
+   
+}
+.react-tabs__tab{
+    list-style-type: none;
+   
+}
+/* Custom React Tab Panel Styles */
+.react-tabs__tab-panel {
+    /* padding: 3.125em;  */
+    margin: 1rem;
+}
+
+.react-tabs__tab-panel  {
+    display: flex;
+    align-items: flex-start;
+}
+
