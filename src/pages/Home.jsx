@@ -8,7 +8,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const Home = () => {
   
   const [movies, setMovies] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("popular");
+  const [selectedCategory, setSelectedCategory] = useState(localStorage.getItem('selectedCategory') || 'popular');
   const [heroImage, setHeroImage] = useState("");
 
   useEffect( () => {
@@ -38,6 +38,8 @@ const Home = () => {
 
   const handleCategoryChange = (listofMovie) => {
     setSelectedCategory(listofMovie);
+    localStorage.setItem('selectedCategory', listofMovie); // Store selected category in localStorage
+
   }
 
   return (
