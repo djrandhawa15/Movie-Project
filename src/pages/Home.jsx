@@ -24,7 +24,6 @@ const Home = () => {
         
         const bg = movies[randomIndex].backdrop_path ? movies[randomIndex].backdrop_path : movies[randomIndex].poster_path;
         setHeroImage(`https://image.tmdb.org/t/p/original${bg}`);
-   
       } 
      
 

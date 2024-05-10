@@ -1,5 +1,5 @@
 
-@media (min-width: 50em) {
+@media (min-width: 36em) {
     .footer {
     display: flex;
     flex-direction: column;

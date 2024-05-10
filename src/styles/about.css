@@ -1,4 +1,27 @@
-.tmdb {
-    height: 50px;
-    width: 150px;
+
+.about-container {
+    /* display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;  */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* .side-photo {
+    width: 620px;
+} */
+
+.text-and-logo-container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.text-content {
+    margin-bottom: 20px;
+}
+
+.tmdb-container {
+    width: 75px;
 }

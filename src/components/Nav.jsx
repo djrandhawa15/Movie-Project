@@ -8,8 +8,8 @@ const Nav = () => {
   
     return (
         <nav className="main-nav">
-            <NavLink to="/About">About</NavLink>
             <NavLink to="/Fav">Favourites</NavLink>
+            <NavLink to="/About">About</NavLink>
         </nav>
     );
 

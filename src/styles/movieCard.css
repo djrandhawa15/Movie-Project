@@ -6,6 +6,8 @@
     display: inline-grid;
     text-align: left;
     align-items: center;
+   
+   
   }
 .movie-card h6{
   font-size: 1.25rem;
@@ -19,4 +21,46 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+
+
+.overview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  display: none;
+  
+}
+
+.hover-overview{
+  position: relative;
+  width: 100%;
+  height: 350px;
+  
+  width:  auto;
+  overflow: hidden;
+}
+
+.hover-overview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.hover-overview:hover .overview {
+  display: block;
+  bottom:0;
+  left: 0;
+  height: 70%;
+
+}
+
+/* .movie-card .overview {
+  position: absolute;
+  
+} */ 
 
