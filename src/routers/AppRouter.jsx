@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Fav from '../pages/Fav';
+import Single from '../pages/Single';
 
 
 
@@ -18,6 +19,7 @@ function AppRouter() {
                 <Route path='/' element={<Home/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/fav' element={<Fav/>}/>
+                <Route path='/single' element={<Single/>}/>
             </Routes>
             <Footer/>
         </div>

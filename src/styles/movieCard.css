@@ -59,8 +59,18 @@
 
 }
 
-/* .movie-card .overview {
-  position: absolute;
-  
-} */ 
+#favorite-color{
+  color: blue;
+ height: 40px;
+ width: 40px;
+ position: absolute;
+ right: 0;
+ top: 0;
+ padding-top: 5px;
+ padding-right: 5px;
+ /* filter: invert(1); */
+}
 
+/* .more-info {
+  padding: 0.5rem;
+} */
