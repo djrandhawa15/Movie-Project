@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 const apiKey = import.meta.env.VITE_API_KEY;
 
 
-const Single = () => {
+const Single = ({movies}) => {
 
-  const { id } = useParams();
-  const [movie, setMovie] = useState(null);
+  const [singleMovie, setSingleMovie] = useState();
+  let {id} = useParams();
 
   useEffect(() => {
     // Fetch movie data using the movie ID from an API
@@ -16,32 +16,39 @@ const Single = () => {
         if (!response.ok) {
           throw new Error('Failed to fetch movie data');
         }
-        const data = await response.json();
-        setMovie(data);
+        const movieData = await response.json();
+        setSingleMovie(movieData);
       } catch (error) {
-        console.error('Error fetching movie data:', error);
+        console.error(error);
       }
     };
 
     fetchMovieData();
-  }, [id]);
+  }, []);
 
 
   return (
     
     <div className='container'>
       <div>
-      <h2>{movie.title}</h2>
-      <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
-      <p>Release Date: {movie.release_date}</p>
-      <p>Overview: {movie.overview}</p>
-      <p>Rating: {movie.vote_average}</p>
-    </div>
+        {singleMovie && (
+          <div>
+             <img src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`} alt={singleMovie.title} />
+             <h2>{singleMovie.title}</h2>
+             <p>Release Date: {singleMovie.release_date}</p>
+             <p>Overview: {singleMovie.overview}</p>
+             <p>Rating: {singleMovie.vote_average}</p>
+            </div>
+        )}
+     
+      
+      </div>
     </div>
   );
 }
     
 
 
-export default Single
+export default Single;
+
 

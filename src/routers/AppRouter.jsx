@@ -19,7 +19,7 @@ function AppRouter() {
                 <Route path='/' element={<Home/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/fav' element={<Fav/>}/>
-                <Route path='/single' element={<Single/>}/>
+                <Route path='/single/:id' element={<Single/>}/>
             </Routes>
             <Footer/>
         </div>
