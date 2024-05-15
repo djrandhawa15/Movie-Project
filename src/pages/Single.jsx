@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 const apiKey = import.meta.env.VITE_API_KEY;
 
+
 const Single = () => {
+
+  const [singleMovie, setSingleMovie] = useState();
   let {id} = useParams();
 
   useEffect(() => {
