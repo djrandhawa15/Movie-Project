@@ -5,6 +5,8 @@
 }
 .react-tabs__tab{
     list-style-type: none;
+    justify-content: space-evenly;
+    display: flex;
    
 }
 /* Custom React Tab Panel Styles */
