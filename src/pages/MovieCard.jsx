@@ -45,6 +45,7 @@ const MovieCard = ({ movie }) => {
       <h6>{movie.title}</h6>
       <p>Release Date: {movie.release_date}</p>
       <p>Rating: {movie.vote_average}</p>
+      
       <button className='more-info'>
       <NavLink to={`/single/${movie.id}`}>
         More Info
