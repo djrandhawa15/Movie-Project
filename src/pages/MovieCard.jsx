@@ -22,7 +22,7 @@ const MovieCard = ({ movie }) => {
     return words.slice(0, 20).join(' ');
   };
   
- 
+
 
   return (
     <section className="movie-card" 
