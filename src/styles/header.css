@@ -3,7 +3,10 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fce7fd;
+    
+    background-color: #FFF2D8;
+    /* background-color: #EAD7BB; */
+    /* background-color: #fce7fd; */
     z-index: 1;
 }
 

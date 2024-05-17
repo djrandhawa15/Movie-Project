@@ -1,6 +1,7 @@
 .main-nav a{
     font-size: 1.5rem;
-    color: #430a47;
+    color: #1A3A56;
+    /* color: #430a47; */
     padding: 12px;
     font-family: "Kalnia", "Times New Roman", Times, serif;
     font-weight: 900;
@@ -42,6 +43,6 @@
     left: 0;
     right: 0;
     padding: 1rem;
-   background-color: #fce7fd;
+   background-color: #FFF2D8;
     }
 }
