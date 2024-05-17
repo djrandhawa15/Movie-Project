@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+// import Cast from '../pages/Cast';
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Single = () => {
@@ -17,14 +18,18 @@ const Single = () => {
         }
         const movieData = await response.json();
         setSingleMovie(movieData);
+ 
+  
         
-        // Fetch cast info using the movie ID
+        //Fetch cast info using the movie ID
         const castResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`);
         if (!castResponse.ok) {
           throw new Error('Failed to fetch cast data');
         }
         const castData = await castResponse.json();
-        setCast(castData.cast);
+         //  get the first 6 actors of the movie
+
+        setCast(castData.cast.slice(0, 6));
       } catch (error) {
         console.error(error);
       }
@@ -43,10 +48,11 @@ const Single = () => {
               <p>Release Date: {singleMovie.release_date}</p>
               <p>Overview: {singleMovie.overview}</p>
               <p>Rating: {singleMovie.vote_average}</p>
+              {/* <Cast/> */}
               <div>
                 <h6>Cast</h6>
                 
-                  {cast.map((actor, index) => (
+                  {cast.map((actor) => (
                  <article>
                       <img src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt={actor.name} />
                       <div>
