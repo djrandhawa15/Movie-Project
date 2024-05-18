@@ -4,6 +4,7 @@ import '../styles/categories.css';
 
 const Categories= ({ fetchMovies }) =>  {
 
+  // array of categories
     const listofMovies = [ "popular", "top_rated", "now_playing", "upcoming"];
     return (
       <Tabs>

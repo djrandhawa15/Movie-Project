@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Hero from './Hero';
 import Categories from './Categories';
 import MovieCard from './MovieCard';
 import Searchbar from './Searchbar';
@@ -9,27 +10,33 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(localStorage.getItem('selectedCategory') || 'popular');
-  const [heroImage, setHeroImage] = useState("");
+  const [heroMovie, setHeroMovie] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
+
+  // function to fetch movies 
   const fetchMovies = async (categoryOrQuery, page = 1) => {
     try {
-      const url = categoryOrQuery === 'popular' || categoryOrQuery === 'top_rated' || categoryOrQuery === 'now_playing' || categoryOrQuery === 'upcoming'
-        ? `https://api.themoviedb.org/3/movie/${categoryOrQuery}?api_key=${apiKey}&page=${page}`
-        : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${categoryOrQuery}&page=${page}`;
+      /// Check if movies are selected by category or from the searchbar
+      const url = ['popular', 'top_rated', 'now_playing', 'upcoming'].includes(categoryOrQuery)
+      ? `https://api.themoviedb.org/3/movie/${categoryOrQuery}?api_key=${apiKey}&page=${page}`
+      : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${categoryOrQuery}&page=${page}`;
 
       const response = await fetch(url);
       const data = await response.json();
-      setMovies((prevMovies) => (page === 1 ? data.results : [...prevMovies, ...data.results]));
+
+      // Filter movies to include only those with a poster path
+      const moviesWithPosters = data.results.filter(movie => movie.poster_path);
+
+      setMovies((prevMovies) => (page === 1 ? moviesWithPosters : [...prevMovies, ...moviesWithPosters]));
       setTotalPages(data.total_pages);
 
-      if (data.results.length > 0) {
-        const randomIndex = Math.floor(Math.random() * data.results.length);
-        const bg = data.results[randomIndex].backdrop_path
-          ? data.results[randomIndex].backdrop_path
-          : data.results[randomIndex].poster_path;
-        setHeroImage(`https://image.tmdb.org/t/p/original${bg}`);
+      // Set hero image
+      if (moviesWithPosters.length > 0) {
+        const randomIndex = Math.floor(Math.random() * moviesWithPosters.length);
+        
+        setHeroMovie(moviesWithPosters[randomIndex]);
       }
     } catch (error) {
       console.error('Error fetching movies:', error);
@@ -40,6 +47,7 @@ const Home = () => {
     fetchMovies(selectedCategory, 1);
   }, [selectedCategory]);
 
+  // function to change categories 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     localStorage.setItem('selectedCategory', category);
@@ -47,6 +55,7 @@ const Home = () => {
     fetchMovies(category, 1); // Fetch movies for the new category
   };
 
+  // function to load more movies
   const handleLoadMore = () => {
     if (currentPage < totalPages) {
       const nextPage = currentPage + 1;
@@ -57,12 +66,7 @@ const Home = () => {
 
   return (
     <div className='container'>
-      <div className="hero-text"></div>
-      {heroImage && (
-        <div className="hero">
-          <img src={heroImage} alt="Hero" className="hero-image" />
-        </div>
-      )}
+      {heroMovie && <Hero movie={heroMovie}/>}
       <Searchbar fetchMovies={fetchMovies} />
       <Categories fetchMovies={handleCategoryChange} />
       <div>

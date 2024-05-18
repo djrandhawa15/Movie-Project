@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 const apiKey = import.meta.env.VITE_API_KEY;
 
-const Cast = () => {
+const Cast = ({movieId}) => {
     const [cast, setCast] = useState([]);
     let { id } = useParams();
 
@@ -15,14 +15,14 @@ const Cast = () => {
               throw new Error('Failed to fetch cast data');
             }
             const castData = await castResponse.json();
-            setCast(castData.cast);
+            setCast(castData.cast.slice(0, 6));
           } catch (error) {
             console.error(error);
           }
         };
         fetchCastInfo();
-
-}, [id]);
+        
+}, [movieId]);
     
 
 

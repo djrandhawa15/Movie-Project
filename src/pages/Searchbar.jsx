@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Searchbar = ({ fetchMovies }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -9,17 +9,12 @@ const Searchbar = ({ fetchMovies }) => {
   };
 
   // Handle search button click
-  const handleSearch = () => {
+  const handleSearch = (e) => {
     if (searchQuery.trim()) {
       fetchMovies(searchQuery);
+      setSearchQuery(""); // Clear the search field after search
     }
-  };
-
-  // Handle Enter key press
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSearch();
-    }
+    
   };
 
   return (
@@ -28,9 +23,8 @@ const Searchbar = ({ fetchMovies }) => {
         type="text"
         placeholder="Search for a movie..."
         value={searchQuery}
-        onChange={handleSearchChange}
-        onKeyPress={handleKeyPress}
-      />
+        onChange={handleSearchChange}/>
+     
       <button onClick={handleSearch}>Search</button>
     </div>
   );
