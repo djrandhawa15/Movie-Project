@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/searchbar.css';
 
 const Searchbar = ({ fetchMovies }) => {
   const [searchQuery, setSearchQuery] = useState('');
