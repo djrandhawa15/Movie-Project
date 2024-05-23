@@ -80,13 +80,13 @@ display: block;
 fill: red;
 } */
 
-#favorite-color:hover path {
+svg#favorite-color:hover path {
 fill: yellow;
 }
-#favorite-color{
+svg#favorite-color{
 height: 40px;
 width: 40px;
-position: absolute;
+/* position: absolute; */
 right: 0;
 top: 0;
 padding-top: 5px;
@@ -94,9 +94,9 @@ padding-right: 5px;
 /* filter: invert(1); */
 }
 
-#favorite-color path {
+/* #favorite-color path {
 fill: white;
-}
+} */
 
 /* .more-info {
 padding: 0.5rem;

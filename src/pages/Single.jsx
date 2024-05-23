@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Cast from '../pages/Cast';
+import Cast from '../components/Cast';
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Single = () => {

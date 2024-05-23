@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Hero from './Hero';
-import Categories from './Categories';
-import MovieCard from './MovieCard';
-import Searchbar from './Searchbar';
+
+import Hero from '../components/Hero';
+import Categories from '../components/Categories';
+import MovieCard from '../components/MovieCard';
+import Searchbar from '../components/Searchbar';
 import '../styles/home.css';
+import isFav from '../utilities/isFav';
+import { useSelector } from 'react-redux';
 
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -13,6 +16,8 @@ const Home = () => {
   const [heroMovie, setHeroMovie] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+
+  const favs = useSelector((state) => state.favorites.items);
 
 
   // function to fetch movies 
@@ -71,7 +76,7 @@ const Home = () => {
       <Categories fetchMovies={handleCategoryChange} />
       <div>
         {movies && movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
+          <MovieCard key={movie.id} movie={movie} isFav={isFav(favs, null, movie.id)} />
         ))}
       </div>
       {currentPage < totalPages && (

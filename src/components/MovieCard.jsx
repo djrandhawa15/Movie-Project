@@ -1,9 +1,30 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/movieCard.css";
+import FavoriteIcon from './FavoriteIcon';
+import isFav from "../utilities/isFav";
+import { addFavorite, removeFavorite } from "../features/favSlice";
+import { useSelector, useDispatch } from "react-redux";
 
-const MovieCard = ({ movie }) => {
+
+
+const MovieCard = ({ movie, isFav }) => {
   const [showOverview, setShowOverview] = useState(true);
+
+  const dispatch = useDispatch();
+  // const favs = useSelector((state) => state.favs.items);
+
+    function handleFavClick(addToFav, obj){
+         console.log("Toggling favorite for movieId:", movie.id);
+        console.log("Current favorites:");
+        if(addToFav === true){
+            dispatch( addFavorite(obj));
+        }else{
+            dispatch(removeFavorite(obj));
+        }
+    }
+  
+
 
   // Function to get the first 20 words of the overview
   const getShortenedOverview = () => {
@@ -20,15 +41,7 @@ const MovieCard = ({ movie }) => {
             alt={movie.title}
           />
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            id="favorite-color"
-          >
-            <path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z" />
-          </svg>
+         
           {showOverview && (
             <p className="overview">{getShortenedOverview()}...</p>
           )}
@@ -42,6 +55,10 @@ const MovieCard = ({ movie }) => {
         <p>Release Date: {movie.release_date}</p>
         <p>Rating: {movie.vote_average}</p>
 
+        {isFav ?
+            <FavoriteIcon movie={movie} remove={true} handleFavClick={handleFavClick} /> :
+            <FavoriteIcon movie={movie} handleFavClick={handleFavClick} remove={false} />
+        }
         <button className="more-info">
           {/* this button is for mobile view */}
           <NavLink to={`/single/${movie.id}`}>More Info</NavLink>

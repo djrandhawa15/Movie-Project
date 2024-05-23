@@ -11,6 +11,7 @@ import Single from '../pages/Single';
 
 function AppRouter() {
   return (
+    // Add inside browserrouter before npm run build - basename='/react-movie'
     <BrowserRouter>
         <div>
             <Header/>
