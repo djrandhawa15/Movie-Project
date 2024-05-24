@@ -1,11 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Cast from '../components/Cast';
+import FavoriteIcon from '../components/FavoriteIcon';
+import { useSelector, useDispatch } from 'react-redux';
+import { addFavorite, removeFavorite } from '../features/favSlice';
+import isFav from '../utilities/isFav';
+import '../styles/single.css'
+import '../styles/movieCard.css'
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Single = () => {
   const [singleMovie, setSingleMovie] = useState(null);
   let { id } = useParams();
+
+  const favs = useSelector((state) => state.favorites.items);
+  
+    // Dispatch to add/ remove fav movies
+  const dispatch = useDispatch();
+
+  function handleFavClick(addToFav, obj){
+   
+   if(addToFav === true){
+       dispatch( addFavorite(obj));
+   }else{
+       dispatch(removeFavorite(obj));
+   }
+}
+
+// Check if the movie is in favorites
+const isFavorite= isFav(favs, true, singleMovie?.id);
+
 
   useEffect(() => {
     // Fetch movie data using the movie ID from an API
@@ -25,22 +49,29 @@ const Single = () => {
   }, [id]);
 
   return (
-    <div className='container'>
-      <div>
+    <div className='single-page' >
+      
         {singleMovie && (
-          <div>
+          <section className='single-container'>
+            <figure className='image-fav-icon'>
             <img src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`} alt={singleMovie.title} />
-            <div className='movie-details'> 
+        
+            {isFavorite ?
+            (<FavoriteIcon movie={singleMovie} remove={true} handleFavClick={handleFavClick} /> ):
+            (<FavoriteIcon movie={singleMovie} handleFavClick={handleFavClick} remove={false}/>)
+        }
+           
+        </figure>
+            <article className='movie-details'> 
               <h2>{singleMovie.title}</h2>
               <p>Release Date: {singleMovie.release_date}</p>
               <p>Overview: {singleMovie.overview}</p>
               <p>Rating: {singleMovie.vote_average}</p>
-              <Cast movieId={id}/>
-             
-            </div>
-          </div>
+              <Cast  movieId={id}/>
+            </article>
+          </section>
         )}
-      </div>
+      
     </div>
   );
 }

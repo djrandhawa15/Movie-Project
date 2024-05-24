@@ -9,6 +9,9 @@
  
  
 }
+
+
+ 
 .movie-card h6{
 font-size: 1.25rem;
 line-height: 2rem;
@@ -34,6 +37,13 @@ font-size: 14px;
 display: none;
 
 }
+
+.hover-overview:hover {
+  transform: translateY(-8px);
+  transition: transform .25s ease-in 0s, -webkit-transform .25s ease-in 0s;
+  
+}
+
 .btn-hover{
 position: absolute;
 bottom: 100px;
@@ -50,7 +60,7 @@ display: none;
 }
 .hover-overview{
 position: relative;
-width: 100%;
+
 height: 350px;
 
 width:  auto;
@@ -76,34 +86,25 @@ height: 70%;
 display: block;
 }
 
-/* .hover-overview:hover #favorite-color path {
-fill: red;
-} */
 
-svg#favorite-color:hover path {
-fill: yellow;
-}
+
+
 svg#favorite-color{
 height: 40px;
 width: 40px;
-/* position: absolute; */
-right: 0;
+position: absolute;
+right: -.30rem;
 top: 0;
-padding-top: 5px;
-padding-right: 5px;
-/* filter: invert(1); */
+
+
 }
-
-/* #favorite-color path {
-fill: white;
-} */
-
-/* .more-info {
-padding: 0.5rem;
-} */
 
 @media (min-width: 50em){
 .more-info{
   display: none;
 }
+svg#favorite-color:hover path {
+  fill: yellow;
+  /* fill: #3ff0af; */
+  }
 }

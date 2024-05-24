@@ -1,0 +1,26 @@
+@media (min-width: 36em){
+    .cast-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+.cast-container h6{
+    width: 100%;
+}
+
+    .cast-style {
+        display: grid;
+        
+        
+    }
+
+    .cast-style img{
+        height: 13rem; 
+        border-radius: 15px;
+    }
+
+    .cast-style h6{
+        font-size: 1.2rem;
+    }
+}

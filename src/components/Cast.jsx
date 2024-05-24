@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import '../styles/cast.css'
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Cast = ({movieId}) => {
@@ -27,16 +28,16 @@ const Cast = ({movieId}) => {
 
 
   return (
-    <div>
-    <h6>Cast</h6>
+    <div className='cast-container'>
+      <h6>Cast</h6>
     
       {cast.map((actor) => (
-     <article>
+     <article className= 'cast-style'>
           <img src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt={actor.name} />
-          <div>
+          
             <h6>{actor.name}</h6>
             <p>{actor.character}</p>
-          </div>
+          
         </article>
       ))}
     

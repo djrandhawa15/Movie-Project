@@ -21,7 +21,7 @@ function FavoriteIcon({ movie, remove, handleFavClick }) {
           viewBox="0 0 24 24"
         >
           <path
-            fill={remove === false ? "#eee" : "#ff0000"}
+            fill={remove === false ? "#3ff0af" : "#ff0000"}
             d="M19 24l-7-6-7 6v-24h14v24z"
           />
         </svg>

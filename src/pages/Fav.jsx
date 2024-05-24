@@ -10,6 +10,7 @@ const Fav = () => {
   
   return (
     <div>
+      <section>
       <h1>Favorite Movies</h1>
       {favs.length < 1 ? (
         <p>
@@ -29,6 +30,7 @@ const Fav = () => {
             ))}
         </div>
       )}
+      </section>
     </div>
   );
 };
