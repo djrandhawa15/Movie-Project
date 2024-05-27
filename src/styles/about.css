@@ -1,18 +1,13 @@
 
 @media (min-width: 36em) {
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
-    }
+    
     
     .about-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100vh;
-        overflow: hidden;
+       
         box-sizing: border-box;
     }
     .about-container {

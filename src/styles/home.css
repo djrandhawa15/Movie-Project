@@ -7,20 +7,11 @@ when there are more than 6 movies
 */
 
 
-/* .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-  overflow-y: auto;
-} */
 
-/* .container > div {
-  padding: 20px;
-} */
 
 .load-btn {
   margin: 20px auto 50px;
-  display: block;
+ 
   padding: 10px 20px;
   background-color: #007bff;
   color: white;

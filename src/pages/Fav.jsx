@@ -8,14 +8,14 @@ import "../styles/fav.css";
 const Fav = () => {
   const favs = useSelector((state) => state.favorites.items);
 
-  useEffect(() => {
-    // Added scrollable when there are more than 6 movies on desktop
-    if (favs.length > 6) {
-      document.body.classList.add("scrollable");
-    } else {
-      document.body.classList.remove("scrollable");
-    }
-  }, [favs]);
+  // Added scrollable when there are more than 6 movies on desktop
+  // useEffect(() => {
+  //   if (favs.length > 6) {
+  //     document.body.classList.add("scrollable");
+  //   } else {
+  //     document.body.classList.remove("scrollable");
+  //   }
+  // }, [favs]);
 
   return (
     <div className="fav-container">
