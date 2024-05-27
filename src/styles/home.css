@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .load-btn {
-  margin: 20px auto 50px; /* Adjust margin to position the button under the last few movies */
+  margin: 20px auto 50px;
   display: block;
   padding: 10px 20px;
   background-color: #007bff;
@@ -23,3 +23,4 @@
 .load-btn:hover {
   background-color: #0056b3;
 }
+
