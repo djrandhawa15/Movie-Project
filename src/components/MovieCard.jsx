@@ -41,13 +41,13 @@ const MovieCard = ({ movie, isFav }) => {
           />
 
          
+{isFav ?
+  <FavoriteIcon movie={movie} remove={true} handleFavClick={handleFavClick} /> :
+  <FavoriteIcon movie={movie} handleFavClick={handleFavClick} remove={false} />
+}
           {showOverview && (
             <p className="overview">{getShortenedOverview()}...</p>
           )}
-          {isFav ?
-            <FavoriteIcon movie={movie} remove={true} handleFavClick={handleFavClick} /> :
-            <FavoriteIcon movie={movie} handleFavClick={handleFavClick} remove={false} />
-        }
           <button className="btn-hover">
             {/* this button is for desktop hover */}
             <NavLink to={`/single/${movie.id}`}>More Info</NavLink>

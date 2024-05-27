@@ -1,14 +1,3 @@
-/*
-I think my code broke something because 
-when i load homepage scrolling doesnt work and i need to press fav 
-then homepage again to make styles work. Quick fix is turning off 
-all styles rn. I was trying to enable scrolling in fav on desktop
-when there are more than 6 movies
-*/
-
-
-
-
 .load-btn {
   margin: 20px auto 50px;
   padding: 10px 20px;

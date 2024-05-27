@@ -28,45 +28,17 @@ line-height: 1.25rem;
 }
 
 
-.overview {
-position: absolute;
-bottom: 0;
-left: 0;
-background-color: rgba(0, 0, 0, 0.8);
-color: white;
-padding: 10px;
-font-size: 14px;
-display: none;
-
-}
-
-.hover-overview:hover {
-  transform: translateY(-8px);
-  transition: transform .25s ease-in 0s, -webkit-transform .25s ease-in 0s;
-  
-}
-
-.btn-hover{
-position: absolute;
-bottom: 100px;
-left: 50%;
-transform: translateX(-50%);
-padding: 5px 10px;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-display: none;
 
 
-}
+
+
+
 .hover-overview{
 position: relative;
-
 height: 350px;
-
 width:  auto;
 overflow: hidden;
+
 }
 
 .hover-overview img {
@@ -88,20 +60,50 @@ height: 70%;
 display: block;
 }
 
-
-
-
 svg#favorite-color{
 height: 40px;
 width: 40px;
 position: absolute;
 right: -.30rem;
 top: 0;
-
-
 }
 
+.more-info, .btn-hover{
+  background-color:#8F0043;
+  
+}
+.more-info a,
+.btn-hover a{
+  color: #FFF2D8;
+
+
+
+  
+}
+
+
+
+
 @media (min-width: 50em){
+
+  .overview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    display: none;
+    
+    }
+
+    .hover-overview:hover {
+      transform: translateY(-8px);
+      transition: transform .25s ease-in 0s, -webkit-transform .25s ease-in 0s;
+      
+    }
+    
 .more-info{
   display: none;
 }
@@ -109,4 +111,31 @@ svg#favorite-color:hover path {
   fill: yellow;
   /* fill: #3ff0af; */
   }
+
+  .btn-hover{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    
+    
+    }
+
+  .btn-hover:hover {
+    background-color: #FFF2D8;
+   
+  }
+
+  .btn-hover:hover a{
+   
+    color:#8F0043;
+  }
+ 
+  
 }
