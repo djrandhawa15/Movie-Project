@@ -7,16 +7,16 @@ when there are more than 6 movies
 */
 
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; 
   overflow-y: auto;
-}
+} */
 
-.container > div {
+/* .container > div {
   padding: 20px;
-}
+} */
 
 .load-btn {
   margin: 20px auto 50px;
