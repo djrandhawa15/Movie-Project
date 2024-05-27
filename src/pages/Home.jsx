@@ -80,7 +80,7 @@ const Home = () => {
         ))}
       </div>
       {currentPage < totalPages && (
-        <button onClick={handleLoadMore}>Load More</button>
+        <button className='load-btn' onClick={handleLoadMore}>Load More</button>
       )}
     </div>
   );

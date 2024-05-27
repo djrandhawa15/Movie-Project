@@ -1,0 +1,56 @@
+
+@media (min-width: 768px) {
+    body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background-color: #fff2d8;
+    z-index: 1000;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #ead7bb;
+    z-index: 1000;
+  }
+
+  .fav-container {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    height: calc(100% - 100px);
+    overflow-y: auto;
+  }
+
+  .fav-container section {
+    text-align: center;
+  }
+
+  .fav-container h1 {
+    margin-bottom: 20px;
+  }
+
+  .movie-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .scrollable {
+    overflow-y: auto;
+  }
+}
