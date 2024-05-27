@@ -1,3 +1,12 @@
+/*
+I think my code broke something because 
+when i load homepage scrolling doesnt work and i need to press fav 
+then homepage again to make styles work. Quick fix is turning off 
+all styles rn. I was trying to enable scrolling in fav on desktop
+when there are more than 6 movies
+*/
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -23,4 +32,3 @@
 .load-btn:hover {
   background-color: #0056b3;
 }
-
