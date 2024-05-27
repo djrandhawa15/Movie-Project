@@ -1,27 +1,6 @@
 
 @media (min-width: 768px) {
 
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 90px;
-    background-color: #fff2d8;
-    z-index: 1000;
-  }
-  
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
-    background-color: #ead7bb;
-    z-index: 1000;
-  }
-
   .fav-container {
     margin-top: 60px;
     margin-bottom: 40px;
