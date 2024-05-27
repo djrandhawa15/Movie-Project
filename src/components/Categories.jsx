@@ -11,6 +11,7 @@ const Categories = ({ fetchMovies }) => {
         <div className="tab-panel-content">
           <Tab>
             {listofMovies.map((listofMovie) => {
+              // to remove _ from names and format them into uppercase
               const formattedName = listofMovie
                 .replace(/_/g, " ")
                 .toUpperCase();
