@@ -1,3 +1,8 @@
+.footer p {
+    margin-bottom: 10;
+    padding: 5px;
+}
+
 
 @media (min-width: 36em) {
     .footer {
@@ -8,6 +13,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     color: #1A3A56;
     background-color:  #EAD7BB;
     /* background-color: #fce7fd; */
