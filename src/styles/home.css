@@ -1,15 +1,23 @@
+
 .load-btn {
   margin: 20px auto 50px;
   margin-bottom: 8rem;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: #3ff0af;
+  color: #000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .load-btn:hover {
-  background-color: #0056b3;
+  background-color: #3ff0af;
 }
 
+
+@media (min-width: 36em) {
+  .moviecard-style{
+    padding: 1rem;
+  }
+ 
+}

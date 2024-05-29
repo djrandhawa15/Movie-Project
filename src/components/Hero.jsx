@@ -10,23 +10,20 @@ const Hero = ( {movie} ) => {
     const { title, backdrop_path, poster_path, overview, release_date, vote_average } = movie;
     const imageUrl = backdrop_path ? `https://image.tmdb.org/t/p/original${backdrop_path}` : `https://image.tmdb.org/t/p/original${poster_path}`;
 
-    const truncateOverview = (text, limit) => {
-      const words = text.split(' ');
-      if (words.length > limit) {
-          return words.slice(0, limit).join(' ') + '...';
-      }
-      return text;
-    };
+    
     return (
-        <div className="hero">
+        <section className="hero">
           <img src={imageUrl} alt={title} className="hero-image" />
           <div className="hero-details">
             <h2>{title}</h2>
             <p>Release Date: {release_date}</p>
-            <p>Overview: {truncateOverview(overview, 15)}</p>
+            <article className='noOverview-mobile'>
+            <p>Overview: {overview}</p>
+            </article>
+            
             <p>Rating: {vote_average}</p>
           </div>
-        </div>
+        </section>
       );
     };
     

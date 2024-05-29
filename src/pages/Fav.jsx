@@ -13,18 +13,24 @@ const Fav = () => {
   return (
     <div className="fav-container">
       <section>
-        <h1>Favorite Movies</h1>
+        
         {favs.length < 1 ? (
-
+          
+        
 // if there is no favorite movie, display this message and link to home page
-          <p>
-            No favourite movies. Return to the <Link to="/">Home</Link> page to
+<div>
+<h1>No Favorite Movies</h1>
+<h6>
+            Return to the <Link to="/">Home</Link> page to
             add some favourite movie.
-          </p>
+          </h6>
+</div>
+          
         ) : (
 
 // if there are favorite movies, display them in a container 
           <div className="movie-card-container">
+            <h1>Favorite Movies</h1>
             {favs !== null &&
               favs.length > 0 &&
               favs.map((movie) => (

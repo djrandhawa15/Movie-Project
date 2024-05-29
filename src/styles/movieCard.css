@@ -6,113 +6,103 @@
   display: inline-grid;
   text-align: left;
   align-items: center;
- 
- 
 }
 
-.more-info{
+.more-info {
   display: block;
-}
- 
-.movie-card h6{
-font-size: 1.25rem;
-line-height: 2rem;
-margin: 0;
-}
-.movie-card p{
-
-margin: 0;
-font-style: italic;
-font-size: 0.875rem;
-line-height: 1.25rem;
+  width: 50%;
+  border-radius: 10px;
 }
 
+.movie-card h6 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 0;
+}
 
+.movie-card p {
+  margin: 0;
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 
-
-
-
-
-.hover-overview{
-position: relative;
-height: 350px;
-width:  auto;
-overflow: hidden;
+.hover-overview {
+  position: relative;
+  height: 350px;
+  width: auto;
+  overflow: hidden;
 
 }
 
 .hover-overview img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+svg#favorite-color {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: -.30rem;
+  top: 0;
+}
 
-.hover-overview:hover .overview {
-display: block;
-bottom:0;
-left: 0;
-height: 70%;
+.more-info,
+.btn-hover {
+  background-color: #8F0043;
 
 }
 
-.hover-overview:hover .btn-hover {
-display: block;
-}
-
-svg#favorite-color{
-height: 40px;
-width: 40px;
-position: absolute;
-right: -.30rem;
-top: 0;
-}
-
-.more-info, .btn-hover{
-  background-color:#8F0043;
-  
-}
 .more-info a,
-.btn-hover a{
+.btn-hover a {
   color: #FFF2D8;
-
-
-
-  
 }
 
 
-
-
-@media (min-width: 50em){
+@media (min-width: 50em) {
 
   .overview {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000000cc;
     color: white;
     padding: 10px;
     font-size: 14px;
     display: none;
-    
-    }
 
-    .hover-overview:hover {
-      transform: translateY(-8px);
-      transition: transform .25s ease-in 0s, -webkit-transform .25s ease-in 0s;
-      
-    }
-    
-.more-info{
-  display: none;
-}
-svg#favorite-color:hover path {
-  fill: yellow;
-  /* fill: #3ff0af; */
   }
 
-  .btn-hover{
+  .hover-overview:hover {
+    transform: translateY(-8px);
+    transition: transform .25s ease-in 0s, -webkit-transform .25s ease-in 0s;
+
+  }
+
+  .hover-overview:hover .overview {
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+
+  }
+
+  .hover-overview:hover .btn-hover {
+    display: block;
+  }
+
+  .more-info {
+    display: none;
+  }
+
+  svg#favorite-color:hover path {
+    fill: yellow;
+   
+  }
+
+  .btn-hover {
     position: absolute;
     bottom: 100px;
     left: 50%;
@@ -123,19 +113,15 @@ svg#favorite-color:hover path {
     border-radius: 5px;
     cursor: pointer;
     display: none;
-    
-    
-    }
+  }
 
   .btn-hover:hover {
     background-color: #FFF2D8;
-   
   }
 
-  .btn-hover:hover a{
-   
-    color:#8F0043;
+  .btn-hover:hover a {
+    color: #8F0043;
   }
- 
-  
+
+
 }

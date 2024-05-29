@@ -72,9 +72,10 @@ const Home = () => {
   return (
     <div className='container'>
       {heroMovie && <Hero movie={heroMovie}/>}
+     
       <Searchbar fetchMovies={fetchMovies} />
       <Categories fetchMovies={handleCategoryChange} />
-      <div>
+      <div className='moviecard-style'>
         {movies && movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} isFav={isFav(favs, null, movie.id)} />
         ))}

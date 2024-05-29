@@ -1,5 +1,5 @@
 .header {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -13,20 +13,21 @@ a:hover, a:focus{
     outline: none;
    
 }
+.sitelogo {
+    width: 300px;
+    height: 100px;
+    
+}
 
 @media (min-width: 36.06em) {
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px; 
+    /* height: 100px;  */
 }
 
-.sitelogo {
-    width: 300px;
-    height: 100px;
-    
-}
+
 
 
 }

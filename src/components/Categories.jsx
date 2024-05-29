@@ -8,27 +8,27 @@ const Categories = ({ fetchMovies }) => {
   return (
     <Tabs>
       <TabList>
-        <div className="tab-panel-content">
-          <Tab>
+      
+         
             {listofMovies.map((listofMovie) => {
               // to remove _ from names and format them into uppercase
               const formattedName = listofMovie
                 .replace(/_/g, " ")
                 .toUpperCase();
               return (
-                <button
+                <Tab
                   key={listofMovie}
                   onClick={() => fetchMovies(listofMovie)}
                 >
                   {formattedName}
-                </button>
+                  </Tab>
+                
               );
             })}
-          </Tab>
-        </div>
+ 
       </TabList>
 
-      <TabPanel></TabPanel>
+   
     </Tabs>
 
     
