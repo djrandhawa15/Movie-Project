@@ -72,7 +72,6 @@ svg#favorite-color {
     padding: 10px;
     font-size: 14px;
     display: none;
-
   }
 
   .hover-overview:hover {
@@ -85,7 +84,6 @@ svg#favorite-color {
     bottom: 0;
     left: 0;
     height: 70%;
-
   }
 
   .hover-overview:hover .btn-hover {
@@ -121,5 +119,12 @@ svg#favorite-color {
     color: #8F0043;
   }
 
-
+  .rating {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: black;
+    background-color: wheat;
+  }
+  
 }

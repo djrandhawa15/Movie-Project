@@ -46,8 +46,12 @@ const MovieCard = ({ movie, isFav }) => {
   <FavoriteIcon movie={movie} handleFavClick={handleFavClick} remove={false} />
 }
           {showOverview && (
+            <div>
             <p className="overview">{getShortenedOverview()}...</p>
+            <p className="rating">Rating: {movie.vote_average}</p>
+          </div>
           )}
+          {/* Render full overview when showOverview is true */}
           <button className="btn-hover">
             {/* this button is for desktop hover */}
             <NavLink to={`/single/${movie.id}`}>More Info</NavLink>
@@ -56,7 +60,7 @@ const MovieCard = ({ movie, isFav }) => {
 
         <h6>{movie.title}</h6>
         <p>Release Date: {movie.release_date}</p>
-        <p>Rating: {movie.vote_average}</p>
+        {/* <p>Rating: {movie.vote_average}</p> */}
 
         
         <button className="more-info">
