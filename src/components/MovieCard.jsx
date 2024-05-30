@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/movieCard.css";
 import FavoriteIcon from './FavoriteIcon';
+import Ratings from "./Ratings";
 import { addFavorite, removeFavorite } from "../features/favSlice";
 import { useDispatch } from "react-redux";
 
@@ -48,7 +49,8 @@ const MovieCard = ({ movie, isFav }) => {
           {showOverview && (
             <div>
             <p className="overview">{getShortenedOverview()}...</p>
-            <p className="rating">Rating: {movie.vote_average}</p>
+            <Ratings rating ={movie.vote_average}/>
+           
           </div>
           )}
           {/* Render full overview when showOverview is true */}

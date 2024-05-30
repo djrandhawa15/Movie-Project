@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Cast from '../components/Cast';
 import FavoriteIcon from '../components/FavoriteIcon';
+import Ratings from '../components/Ratings';
 import { useSelector, useDispatch } from 'react-redux';
 import { addFavorite, removeFavorite } from '../features/favSlice';
 import isFav from '../utilities/isFav';
@@ -60,13 +61,13 @@ const isFavorite= isFav(favs, true, singleMovie?.id);
             (<FavoriteIcon movie={singleMovie} remove={true} handleFavClick={handleFavClick} /> ):
             (<FavoriteIcon movie={singleMovie} handleFavClick={handleFavClick} remove={false}/>)
         }
-           
+            <Ratings rating={singleMovie.vote_average} />
         </figure>
             <article className='movie-details'> 
               <h2>{singleMovie.title}</h2>
               <p>Release Date: {singleMovie.release_date}</p>
               <p>Overview: {singleMovie.overview}</p>
-              <p>Rating: {singleMovie.vote_average}</p>
+             
               <Cast  movieId={id}/>
             </article>
           </section>

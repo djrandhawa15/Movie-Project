@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import StarRating from 'react-native-star-rating-widget';
+import React from 'react';
+import '../styles/movieCard.css';
 
-const Ratings = () => {
-  const [rating, setRating] = useState(0);
+const Ratings = ({rating}) => {
+ 
 
   return (
-    <StarRating
-      rating={rating}
-      onChange={setRating}
-    />
+    <div  className="rating"> 
+              <p>{rating.toFixed(1)}</p>
+              </div>
   );
 };
 

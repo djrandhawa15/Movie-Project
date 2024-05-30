@@ -20,12 +20,12 @@
   margin: 0;
 }
 
-.movie-card p {
+/* .movie-card p {
   margin: 0;
   font-style: italic;
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
+} */
 
 .hover-overview {
   position: relative;
@@ -60,6 +60,24 @@ svg#favorite-color {
   color: #FFF2D8;
 }
 
+.rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  background-color: #8F0043;
+  height: 2.5rem;
+  width: 2rem;
+  
+}
+
+.rating p{
+  color: #f5f5f5;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: .5rem auto;
+    text-align: center;
+}
 
 @media (min-width: 50em) {
 
@@ -119,12 +137,6 @@ svg#favorite-color {
     color: #8F0043;
   }
 
-  .rating {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    color: black;
-    background-color: wheat;
-  }
+ 
   
 }
