@@ -78,7 +78,6 @@ svg#favorite-color {
   .hover-overview:hover {
     transform: translateY(-8px);
     transition: transform .25s ease-in 0s, -webkit-transform .25s ease-in 0s;
-
   }
 
   .hover-overview:hover .overview {
@@ -99,7 +98,6 @@ svg#favorite-color {
 
   svg#favorite-color:hover path {
     fill: yellow;
-   
   }
 
   .btn-hover {
