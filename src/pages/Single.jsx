@@ -57,10 +57,16 @@ const isFavorite= isFav(favs, true, singleMovie?.id);
             <figure className='image-fav-icon'>
             <img src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`} alt={singleMovie.title} />
         
-            {isFavorite ?
+            {/* {isFavorite ?
             (<FavoriteIcon movie={singleMovie} remove={true} handleFavClick={handleFavClick} /> ):
             (<FavoriteIcon movie={singleMovie} handleFavClick={handleFavClick} remove={false}/>)
-        }
+        } */}
+        <FavoriteIcon 
+  movie={singleMovie} 
+  remove={isFavorite} 
+  handleFavClick={handleFavClick} 
+/>
+
             <Ratings rating={singleMovie.vote_average} />
         </figure>
             <article className='movie-details'> 
