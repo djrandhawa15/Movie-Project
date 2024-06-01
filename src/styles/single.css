@@ -1,22 +1,20 @@
 .single-page{
     margin: 0;
-    display: flex;
 }
 
 .single-container {
     margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 30% 60%;
 }
 
 .image-fav-icon {
     float: left;
     position: relative;
+    height: 600px;
     width: auto;
     overflow: hidden;
-    margin-top: 7.5rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 3rem;
-
+    margin-top: 1rem;
 }
 
 .image-fav-icon img {
@@ -26,79 +24,6 @@
 }
 
 .movie-details{
-    text-align: center;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 1rem 0rem;
-}
-
-.movie-details img {
-    width: 150px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-@media (min-width: 36em){
-.single-container {
-    margin-top: 1rem;
-    /* display: grid;
-    grid-template-columns: 30% 60%; */
-}
-.movie-details {
     text-align: left;
-    margin-top: 5rem;
-    margin-left: 2rem;
-}
 }
 
-@media only screen and (max-width: 320px) {
-    .image-fav-icon img {
-        width: 100%; 
-        height: 100%; 
-        object-fit: cover; 
-    }
-}
-
-@media (min-width: 576px) and (max-width: 1024px) {
-    .single-container {
-      display: block; /* Change to block layout for tablet */
-      margin-left: 3rem;
-    }
-    
-    .image-fav-icon {
-      float: none;
-      width: 80%;
-      margin-top: 10rem; /* Center align image-fav-icon */
-    }
-
-
-    
-    .movie-details {
-      text-align: center; /* Center align movie-details */
-      margin-top: 1rem;
-    }
-  }
-  
-
-
-/* @media only screen and (max-width: 600px){
-    .single-container {
-        margin-top: 1rem;
-    }
-
-    .image-fav-icon {
-        display: grid;
-        height: 400px;
-        width: 100%;
-        overflow: hidden;
-        margin: 7.5rem 1rem;
-        
-    }
-    
-    .image-fav-icon img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-} */
