@@ -64,7 +64,6 @@ svg#favorite-color {
   position: absolute;
   top: 0;
   left: 0;
-  
   background-color: #8F0043;
   height: 2.5rem;
   width: 2rem;
@@ -137,6 +136,4 @@ svg#favorite-color {
     color: #8F0043;
   }
 
- 
-  
 }

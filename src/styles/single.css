@@ -1,5 +1,6 @@
 .single-page{
     margin: 0;
+    display: flex;
 }
 
 .single-container {
@@ -11,7 +12,11 @@
     position: relative;
     width: auto;
     overflow: hidden;
-    margin: 7.5rem 2rem;
+    margin-top: 7.5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+
 }
 
 .image-fav-icon img {
@@ -37,8 +42,8 @@
 @media (min-width: 36em){
 .single-container {
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 30% 60%;
+    /* display: grid;
+    grid-template-columns: 30% 60%; */
 }
 .movie-details {
     text-align: left;
