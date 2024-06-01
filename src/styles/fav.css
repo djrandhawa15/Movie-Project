@@ -1,25 +1,8 @@
-
-@media (min-width: 768px) {
-
-  /* .fav-container {
-    margin-top: 60px;
-    margin-bottom: 40px;
-    height: calc(100% - 100px);
-    overflow-y: auto;
-    text-align: center;
-  }
-
- 
-
-  .fav-container h1 {
-    margin-bottom: 20px;
-  }
-
-  .movie-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  } */
-
+.fav-container{
+  display: flex;
+ flex-direction: column;
+ margin-top: 6rem;
 }
+
+
+

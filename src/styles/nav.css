@@ -14,7 +14,8 @@
     color: #8F0043;
 }
 
-.main-nav a:focus{
+.main-nav a:focus,
+.main-nav a:active{
     outline: none;
    
     color: #8F0043;

@@ -1,12 +1,11 @@
 .single-page{
     margin: 0;
+    padding: 1rem;
+}
+.single-container {
+    margin-top: 7rem;
 }
 
-.single-container {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 30% 60%;
-}
 
 .image-fav-icon {
     float: left;
@@ -27,3 +26,10 @@
     text-align: left;
 }
 
+@media (min-width: 50em) {
+    .single-container {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 30% 60%;
+    }
+}
