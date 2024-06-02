@@ -23,7 +23,7 @@ const About = () => {
               <li>Priya - <a href="http://priyawebcodes.com">Priya's Website</a></li>
               <li>Simran - <a href="http://simrancodes.com">Simran's Website</a></li>
               <li>Dilraj - <a href="http://dilrajrandhawa.com">Dilraj's Website</a></li>
-              <li>Mudarres - <a href="http://xyz.com">Mudarres's Website</a></li>
+              <li>Mudarres - <a href="http://mudarresamin.com">Mudarres's Website</a></li>
               </ul>
               </p>
        
