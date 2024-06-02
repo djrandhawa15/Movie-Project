@@ -2,6 +2,9 @@
     margin-bottom: 10;
     padding: 5px;
 }
+.footer {
+    margin-bottom: 5rem;
+}
 
 
 @media (min-width: 36em) {
@@ -16,7 +19,7 @@
     z-index: 1;
     color: #1A3A56;
     background-color: #FFF2D8;
-  
+  margin-bottom: 0;
 }
 
 .footer p{

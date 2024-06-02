@@ -1,82 +1,48 @@
-
-.text-and-logo-container {
-    /* margin-top: 50px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    box-sizing: border-box;
-    margin-bottom: 50px;
+.about-container{
+    text-align: left;
+   
+   
 }
 
-.text-content {
-    margin-bottom: 20px;
-    text-align: center;
-    margin: 0 2rem;
+.side-photo img{
+   object-fit: cover;
 }
-
+.about-info{
+    padding: 1rem;
+  
+    margin-bottom: 2rem;
+}
 .tmdb-container {
-    width: 75px;
+    width: 50px;
+    margin-top: .5rem;
 }
 
-.side-photo img {
-    width: 400px;
-    height: 70vh;
-    display: grid;
-    padding: 2rem;
-    margin-top: 8rem;
-    /* margin: 10rem 2rem; */
-}
-
-ul {
+ul{
     list-style-type: none;
 }
 
-
-@media (min-width: 36em) {
-    
-    .about-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        box-sizing: border-box;
+@media (min-width: 40em) {
+    .side-photo img{
+        height: 700px;
+        width: 100%;
+     }
+}
+@media (min-width: 50em) {
+    .about-container{
+        margin-top: 7.5rem;
+       
     }
-
-    .about-container {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        padding: 0 20px;
+    .side-photo{
+        float: left;
     }
     
-    .side-photo {
-        flex: 1;
-        max-width: 400px;
-        height: 70vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 2rem;
-    }
-    
-    .text-and-logo-container {
-        flex: 1;
-        max-width: 70%;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    
+.about-info{
+    padding-left: 22rem;
+    font-size: 1.2rem;
+}
+.side-photo img{
+    height: 450px;
+    width: auto;
+ padding-left: 1rem;
+}
 }
