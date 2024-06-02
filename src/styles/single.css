@@ -23,7 +23,16 @@
 }
 
 .movie-details{
-    text-align: left;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem 0rem;
+}
+.movie-details img {
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 @media (min-width: 50em) {
@@ -31,5 +40,12 @@
         margin-top: 1rem;
         display: grid;
         grid-template-columns: 30% 60%;
+    }
+
+    
+    .movie-details {
+        text-align: left;
+        margin-top: 5rem;
+        margin-left: 2rem;
     }
 }

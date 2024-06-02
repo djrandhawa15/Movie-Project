@@ -4,6 +4,7 @@ import tmdbLogo from '../assets/tmdb.svg';
 import sidephoto from '../assets/pexels-bylukemiller-19068901.jpg';
 import '../styles/about.css';
 
+
 const About = () => {
   return (
         <section className="about-container">
