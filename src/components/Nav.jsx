@@ -6,8 +6,8 @@ import "../styles/nav.css";
 const Nav = () => {
   return (
     <nav className="main-nav">
-      <NavLink to="/Fav">Favourites</NavLink>
-      <NavLink to="/About">About</NavLink>
+      <NavLink to="/fav">Favourites</NavLink>
+      <NavLink to="/about">About</NavLink>
     </nav>
   );
 };
