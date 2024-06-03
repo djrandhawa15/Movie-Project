@@ -14,8 +14,11 @@
 
 
 @media (min-width: 36em) {
-  .moviecard-style{
+  .moviecard-style {
     padding: 1rem;
   }
- 
+
+  .load-btn {
+    margin-bottom: 5rem;
+  }
 }

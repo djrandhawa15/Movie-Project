@@ -7,31 +7,24 @@ const Categories = ({ fetchMovies }) => {
   const listofMovies = ["popular", "top_rated", "now_playing", "upcoming"];
   return (
     <Tabs>
+      {/* TabList to contain the list of categories */}
       <TabList>
-      
-         
-            {listofMovies.map((listofMovie) => {
-              // to remove _ from names and format them into uppercase
-              const formattedName = listofMovie
-                .replace(/_/g, " ")
-                .toUpperCase();
-              return (
-                <Tab
-                  key={listofMovie}
-                  onClick={() => fetchMovies(listofMovie)}
-                >
-                  {formattedName}
-                  </Tab>
-                
-              );
-            })}
- 
+        {/* Map through the list of movies to create tabs */}
+        {listofMovies.map((listofMovie) => {
+          // to remove _ from names and format them into uppercase
+          const formattedName = listofMovie.replace(/_/g, " ").toUpperCase();
+          return (
+            // Create a tab for each category
+            <Tab
+              key={listofMovie}
+              onClick={() => fetchMovies(listofMovie)} // Call the fetchMovies function with the selected category when tab is clicked
+            >
+              {formattedName} {/* Display the formatted category name */}
+            </Tab>
+          );
+        })}
       </TabList>
-
-   
     </Tabs>
-
-    
   );
 };
 

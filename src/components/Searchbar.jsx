@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import '../styles/searchbar.css';
+import React, { useState } from "react";
+import "../styles/searchbar.css";
 
+// Searchbar component responsible for user input to search for movies
 const Searchbar = ({ fetchMovies }) => {
-  const [searchQuery, setSearchQuery] = useState('');
+  // State to manage search query
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Handle search input change
   const handleSearchChange = (e) => {
@@ -15,17 +17,18 @@ const Searchbar = ({ fetchMovies }) => {
       fetchMovies(searchQuery);
       setSearchQuery(""); // Clear the search field after search
     }
-    
   };
 
+  //Perform seach
   return (
     <div className="search-bar">
       <input
         type="text"
         placeholder="Search for a movie..."
         value={searchQuery}
-        onChange={handleSearchChange}/>
-     
+        onChange={handleSearchChange}
+      />
+
       <button onClick={handleSearch}>Search</button>
     </div>
   );

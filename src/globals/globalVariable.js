@@ -1,1 +1,1 @@
-export const appStorageName = 'movie-app-favs';
+export const appStorageName = 'cinehub';

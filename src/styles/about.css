@@ -1,12 +1,13 @@
-.about-container{
+.about-container {
     text-align: left;
+    margin-top: 2rem;
 }
 
-.side-photo img{
-   object-fit: cover;
+.side-photo img {
+    object-fit: cover;
 }
 
-.about-info{
+.about-info {
     padding: 1rem;
     margin-bottom: 2rem;
 }
@@ -16,41 +17,39 @@
     margin-top: .5rem;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
 .icon-large {
-    font-size: 1em; 
+    font-size: 1em;
     margin: 0 3px;
     color: #eb817e;
 }
-  
+
 @media (min-width: 40em) {
-    .side-photo img{
+    .side-photo img {
         height: 700px;
         width: 100%;
-     }
+    }
 }
 
 @media (min-width: 50em) {
-    .about-container{
-        margin-top: 7.5rem;
-       
-    }
-    .side-photo{
+
+    .side-photo {
         float: left;
+
     }
-    
-    .about-info{
+
+    .about-info {
         padding-left: 22rem;
         font-size: 1.2rem;
     }
-    .side-photo img{
+
+    .side-photo img {
         height: 450px;
         width: auto;
         padding-left: 1rem;
+
     }
 }
-
-

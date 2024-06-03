@@ -4,16 +4,19 @@ import "../styles/movieCard.css";
 // Fav Button
 
 function FavoriteIcon({ movie, remove, handleFavClick }) {
+  // Function to handle adding movie to favorites
   function handleAddFav() {
     handleFavClick(true, movie);
   }
 
+  // Function to handle removing movie from favorites
   function handleRemoveFav() {
     handleFavClick(false, movie);
   }
 
   return (
     <>
+      {/* Button for adding or removing from favorites, based on remove prop  */}
       <button onClick={remove === false ? handleAddFav : handleRemoveFav}>
         <svg
           id="favorite-color"
@@ -26,10 +29,8 @@ function FavoriteIcon({ movie, remove, handleFavClick }) {
           />
         </svg>
       </button>
-     
     </>
   );
 }
-
 
 export default FavoriteIcon;

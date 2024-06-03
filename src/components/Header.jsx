@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from '../assets/movieLogo.svg'
-import Nav from '../components/Nav';
-import '../styles/header.css'
+import logo from "../assets/movieLogo.svg";
+import Nav from "../components/Nav";
+import "../styles/header.css";
 
 const Header = () => {
   return (
-    <div className='header'>
-      <NavLink to='/'>
-        <img className='sitelogo' src={logo} alt="Logo" />
+    <div className="header">
+      <NavLink to="/">
+        <img className="sitelogo" src={logo} alt="Logo" />
       </NavLink>
-        <Nav/>
-        </div>
-  )
-}
+      <Nav />
+    </div>
+  );
+};
 
 export default Header;

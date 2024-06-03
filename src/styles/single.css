@@ -1,20 +1,20 @@
 .single-page {
-    margin: 0;
+    margin-bottom: 1rem;
     padding: 1rem;
-    
-   
+
+
 }
 
-.movie-details{
+.movie-details {
     text-align: left;
-   
+
 }
 
-.single-container{
+.single-container {
     margin-top: 7rem;
     display: flex;
     flex-direction: column;
-  
+
 }
 
 
@@ -22,10 +22,10 @@
     float: left;
     position: relative;
     height: 450px;
-   width: 288px;
+    width: 288px;
     overflow: hidden;
-   padding:0;
-   margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .image-fav-icon img {
@@ -34,46 +34,34 @@
     object-fit: cover;
 }
 
-@media (min-width: 36em){
-   .single-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-   }
-    .movie-details{
-       
+@media (min-width: 36em) {
+    .single-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .movie-details {
+
         padding-left: 1.5rem;
     }
 }
 
-
-
 @media (min-width: 40em) {
-   
-   
-    .movie-details{
-        
+    .movie-details {
+
         margin-right: 2rem;
     }
-
-
     .image-fav-icon {
         height: 500px;
         width: 300px;
     }
-
-    
 }
 
 @media (min-width: 50em) {
-   
-    .single-container{
+
+    .single-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-       }
-
-       .movie-details{
-        
-        margin-right: 2.5rem;
     }
     .image-fav-icon {
         height: 600px;
@@ -82,34 +70,26 @@
 
 }
 
-@media (min-width: 62em){
-    .single-container{
+@media (min-width: 62em) {
+    .single-container {
         display: grid;
-        grid-template-columns: repeat(2 ,1fr)
-       }
+        grid-template-columns: repeat(2, 1fr)
+    }
 
-       .movie-details{
-        
+    .movie-details {
+
         margin-right: 2.5rem;
     }
-    .image-fav-icon {
-        height: 700px;
-        width: 500px;
-    }
 }
-@media (min-width: 80em){
-    .single-container{
-        display: grid;
-        grid-template-columns: 40% 60%;
-       }
 
-       .movie-details{
-        
-        margin-right: 30rem;
-        font-size: 1.5rem;
+@media (min-width: 80em) {
+    .single-container {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        gap: 4rem;
+
     }
-    .image-fav-icon {
-        height: 700px;
-        width: 500px;
-    }
+
+
+
 }

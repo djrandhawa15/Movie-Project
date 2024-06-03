@@ -1,4 +1,33 @@
-.cast-container {
+.cast-style img {
+    height: 200px;
+    border-radius: 20%;
+}
+
+@media (min-width: 36em) {
+    .cast-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .cast-container h6 {
+        width: 100%;
+    }
+
+    .cast-style {
+        display: grid;
+
+
+    }
+
+    .cast-style h6 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* .cast-container {
     text-align: center;
 }
 
@@ -38,4 +67,4 @@
     .cast-style h6 {
         font-size: 1.2rem;
     }
-}
+} */

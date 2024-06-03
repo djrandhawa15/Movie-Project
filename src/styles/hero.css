@@ -1,14 +1,15 @@
-.hero{
+.hero {
     position: relative;
-    width: 100%; 
+    width: 100%;
     z-index: 1;
-    margin-top: 7rem; 
+    margin-top: 7rem;
 }
 
-.hero img{
+.hero img {
     opacity: 0.3;
 }
-.hero-details{
+
+.hero-details {
     position: absolute;
     width: 70%;
     bottom: 0;
@@ -18,37 +19,38 @@
     padding: 1rem;
 }
 
-.hero-details h2 ,p{
+.hero-details h2,
+p {
     margin: 0;
 }
 
-.noOverview-mobile{
+.noOverview-mobile {
     display: none;
 }
 
-@media (min-width: 50em){
-.hero img{
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    object-position: top;
-}
+@media (min-width: 50em) {
+    .hero img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        object-position: top;
+    }
 
-.hero-details h2 {
-    font-size: 2rem;
-}
+    .hero-details h2 {
+        font-size: 2rem;
+    }
 
-.noOverview-mobile{
-    display: block;
-}
+    .noOverview-mobile {
+        display: block;
+    }
 
-.hero-details h2{
-    margin: 0;
-    padding: 1rem;
-}
+    .hero-details h2 {
+        margin: 0;
+        padding: 1rem;
+    }
 
-.hero-details p{
-    margin: 0;
-    padding: 1rem;
-}
+    .hero-details p {
+        margin: 0;
+        padding: 1rem;
+    }
 }

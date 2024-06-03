@@ -1,13 +1,12 @@
-import React from 'react';
-import '../styles/movieCard.css';
+import React from "react";
+import "../styles/movieCard.css";
 
-const Ratings = ({rating}) => {
- 
-
+// Ratings component responsible for displaying movie ratings
+const Ratings = ({ rating }) => {
   return (
-    <div  className="rating"> 
-              <p>{rating.toFixed(1)}</p>
-              </div>
+    <div className="rating">
+      <p>{rating.toFixed(1)}</p>
+    </div>
   );
 };
 
