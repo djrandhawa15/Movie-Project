@@ -52,32 +52,27 @@ const isFavorite= isFav(favs, true, singleMovie?.id);
   return (
     <div className='single-page' >
       
-        {singleMovie && (
-          <section className='single-container'>
-            <figure className='image-fav-icon'>
-            <img src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`} alt={singleMovie.title} />
-        
-            {isFavorite ?
-            (<FavoriteIcon movie={singleMovie} remove={true} handleFavClick={handleFavClick} /> ):
-            (<FavoriteIcon movie={singleMovie} handleFavClick={handleFavClick} remove={false}/>)
-        }
-        {/* <FavoriteIcon 
-  movie={singleMovie} 
-  remove={isFavorite} 
-  handleFavClick={handleFavClick} 
-/> */}
+      {singleMovie && (
+  <section className='single-container'>
+    <figure className='image-fav-icon'>
+      <img src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`} alt={singleMovie.title} />
+      <FavoriteIcon 
+        movie={singleMovie} 
+        handleFavClick={handleFavClick} 
+        remove={isFavorite} 
+      />
+      <Ratings rating={singleMovie.vote_average} />
+    </figure>
+    <article className='movie-details'> 
+      <h2>{singleMovie.title}</h2>
+      <p>Release Date: {singleMovie.release_date}</p>
+      <p>Overview: {singleMovie.overview}</p>
+    </article>
+      <Cast movieId={id}/>
+  </section>
+)}
 
-            <Ratings rating={singleMovie.vote_average} />
-        </figure>
-            <article className='movie-details'> 
-              <h2>{singleMovie.title}</h2>
-              <p>Release Date: {singleMovie.release_date}</p>
-              <p>Overview: {singleMovie.overview}</p>
-             
-              <Cast  movieId={id}/>
-            </article>
-          </section>
-        )}
+
       
     </div>
   );

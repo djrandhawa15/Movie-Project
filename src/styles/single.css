@@ -1,19 +1,31 @@
-.single-page{
+.single-page {
     margin: 0;
     padding: 1rem;
+    
+   
 }
-.single-container {
+
+.movie-details{
+    text-align: left;
+   
+}
+
+.single-container{
     margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+  
 }
 
 
 .image-fav-icon {
     float: left;
     position: relative;
-    height: 600px;
-    width: auto;
+    height: 450px;
+   width: 288px;
     overflow: hidden;
-    margin-top: 1rem;
+   padding:0;
+   margin: 0;
 }
 
 .image-fav-icon img {
@@ -22,30 +34,82 @@
     object-fit: cover;
 }
 
-.movie-details{
-    text-align: center;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 1rem 0rem;
-}
-.movie-details img {
-    width: 150px;
-    height: 200px;
-    border-radius: 50%;
+@media (min-width: 36em){
+   .single-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   }
+    .movie-details{
+       
+        padding-left: 1.5rem;
+    }
 }
 
-@media (min-width: 50em) {
-    .single-container {
-        margin-top: 1rem;
-        display: grid;
-        grid-template-columns: 30% 60%;
+
+
+@media (min-width: 40em) {
+   
+   
+    .movie-details{
+        
+        margin-right: 2rem;
+    }
+
+
+    .image-fav-icon {
+        height: 500px;
+        width: 300px;
     }
 
     
-    .movie-details {
-        text-align: left;
-        margin-top: 5rem;
-        margin-left: 2rem;
+}
+
+@media (min-width: 50em) {
+   
+    .single-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       }
+
+       .movie-details{
+        
+        margin-right: 2.5rem;
+    }
+    .image-fav-icon {
+        height: 600px;
+        width: 400px;
+    }
+
+}
+
+@media (min-width: 62em){
+    .single-container{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr)
+       }
+
+       .movie-details{
+        
+        margin-right: 2.5rem;
+    }
+    .image-fav-icon {
+        height: 700px;
+        width: 500px;
+    }
+}
+@media (min-width: 80em){
+    .single-container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+       }
+
+       .movie-details{
+        
+        margin-right: 30rem;
+        font-size: 1.5rem;
+    }
+    .image-fav-icon {
+        height: 700px;
+        width: 500px;
     }
 }

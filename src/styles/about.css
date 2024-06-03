@@ -1,17 +1,16 @@
 .about-container{
     text-align: left;
-   
-   
 }
 
 .side-photo img{
    object-fit: cover;
 }
+
 .about-info{
     padding: 1rem;
-  
     margin-bottom: 2rem;
 }
+
 .tmdb-container {
     width: 50px;
     margin-top: .5rem;
@@ -21,12 +20,19 @@ ul{
     list-style-type: none;
 }
 
+.icon-large {
+    font-size: 1em; 
+    margin: 0 3px;
+    color: #eb817e;
+}
+  
 @media (min-width: 40em) {
     .side-photo img{
         height: 700px;
         width: 100%;
      }
 }
+
 @media (min-width: 50em) {
     .about-container{
         margin-top: 7.5rem;
@@ -36,13 +42,15 @@ ul{
         float: left;
     }
     
-.about-info{
-    padding-left: 22rem;
-    font-size: 1.2rem;
+    .about-info{
+        padding-left: 22rem;
+        font-size: 1.2rem;
+    }
+    .side-photo img{
+        height: 450px;
+        width: auto;
+        padding-left: 1rem;
+    }
 }
-.side-photo img{
-    height: 450px;
-    width: auto;
- padding-left: 1rem;
-}
-}
+
+
