@@ -1,13 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/nav.css";
 
 // Nav component rendering navigation links for Favorites and About pages
 const Nav = () => {
   return (
     <nav className="main-nav">
-      <NavLink to="/fav">Favourites</NavLink>
-      <NavLink to="/about">About</NavLink>
+      <Link to="/fav">Favourites</Link>
+      <Link to="/about">About</Link>
     </nav>
   );
 };
