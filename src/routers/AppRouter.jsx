@@ -7,12 +7,12 @@ import About from "../pages/About";
 import Fav from "../pages/Fav";
 import Single from "../pages/Single";
 import PageNotFound from "../pages/PageNotFound";
-import { appStorageName } from '../globals/globalVariable';
+
 
 function AppRouter() {
   return (
     // Add inside browserrouter before npm run build - basename='/react-movie'
-    <BrowserRouter basename={`/${appStorageName}`}>
+    <BrowserRouter basename='/cinehub'>
       <div>
         <Header />
 
