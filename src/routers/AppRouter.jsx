@@ -12,7 +12,7 @@ import { appStorageName } from '../globals/globalVariable';
 function AppRouter() {
   return (
     // Add inside browserrouter before npm run build - basename='/react-movie'
-    <BrowserRouter basename="/cinehub">
+    <BrowserRouter basename={`/${appStorageName}`}>
       <div>
         <Header />
 
