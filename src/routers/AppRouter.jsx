@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Fav from "../pages/Fav";
 import Single from "../pages/Single";
+import PageNotFound from "../pages/PageNotFound";
 import { appStorageName } from '../globals/globalVariable';
 
 function AppRouter() {
@@ -16,10 +17,11 @@ function AppRouter() {
         <Header />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/about" exact element={<About />} />
           <Route path="/fav" element={<Fav />} />
-          <Route path="/single/:id" element={<Single />} />
+          <Route path="/single/:id" exact element={<Single />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </div>
