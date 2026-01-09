@@ -12,7 +12,7 @@ import PageNotFound from "../pages/PageNotFound";
 function AppRouter() {
   return (
     // Add inside browserrouter before npm run build - basename='/react-movie'
-    <BrowserRouter basename='/cinehub'>
+    <BrowserRouter basename='/'>
       <div>
         <Header />
 
